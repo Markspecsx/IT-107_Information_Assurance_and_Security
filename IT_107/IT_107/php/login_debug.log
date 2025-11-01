@@ -1,0 +1,16 @@
+[2025-10-30 08:10:41] Login attempt for username='rayt231' - userFound=1 failedAttempts=0
+[2025-10-30 08:10:41] Password verified for username='rayt231'. Successful login.
+[2025-10-30 08:10:44] Login attempt for username='rayt231' - userFound=1 failedAttempts=0
+[2025-10-30 08:10:44] Password verified for username='rayt231'. Successful login.
+[2025-10-30 08:10:45] Login attempt for username='rayt231' - userFound=1 failedAttempts=0
+[2025-10-30 08:10:45] Password verified for username='rayt231'. Successful login.
+[2025-10-30 08:10:46] Login attempt for username='rayt231' - userFound=1 failedAttempts=0
+[2025-10-30 08:10:46] Password verified for username='rayt231'. Successful login.
+[2025-10-30 08:10:48] Login attempt for username='rayt231' - userFound=1 failedAttempts=0
+[2025-10-30 08:10:48] Password verified for username='rayt231'. Successful login.
+[2025-10-30 08:29:33] Login attempt for username='rayt321' - userFound=0 failedAttempts=0
+[2025-10-30 08:29:33] Password verification failed for username='rayt321'.
+[2025-10-30 08:29:41] Login attempt for username='rayt321' - userFound=0 failedAttempts=1
+[2025-10-30 08:29:41] Password verification failed for username='rayt321'.
+[2025-10-30 08:29:41] Login attempt for username='rayt321' - userFound=0 failedAttempts=2
+[2025-10-30 08:29:41] Password verification failed for username='rayt321'.

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - CodeKitchen</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <div class="header-content">
+        <div class="prospect-name">CodeKitchen</div>
+        <nav>
+            <ul>
+                <!-- nav items rendered by js/nav.js -->
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="wrapper">
+        <form id="login-form" action="php/login.php" method="POST">
+            <h1>Login</h1>
+            
+            <div class="input-box">
+                <label for="username">Username*</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                <span class="error-msg" id="username-error"></span>
+            </div>
+            
+            <div class="input-box">
+                <label for="password">Password*</label>
+                <div class="password-container">
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <span class="show-password" onclick="togglePassword()">👁️</span>
+                </div>
+                <span class="error-msg" id="password-error"></span>
+            </div>
+            
+            <div class="remember-forgot">
+                <label><input type="checkbox" name="remember"> Remember me</label>
+                <a href="forgot-password.html" id="forgot-link" style="display:none;">Forgot Password? Reset Here</a>
+            </div>
+            
+            <div id="lockout-timer" style="display:none;">
+                <p>Too many failed attempts. Please wait <span id="timer">0</span> seconds.</p>
+            </div>
+            
+            <button type="submit" class="btn" id="login-btn">Login</button>
+            <div class="register-link" id="register-link-div">
+                <p>Don't have an account? <a href="register.html" id="register-link">Register</a></p>
+            </div>
+        </form>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2025 CodeKitchen. All rights reserved.</p>
+</footer>
+
+<script src="js/nav.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

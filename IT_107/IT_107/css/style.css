@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img.jpg') no-repeat center/cover;
+}
+
+header {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.prospect-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffd700;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.wrapper {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper-home {
+  text-align: center;
+  color: white;
+}
+
+.wrapper-home h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.wrapper-home p {
+  font-size: 1.2rem;
+}
+
+form h1 {
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+form h3 {
+  color: white;
+  margin: 1.5rem 0 1rem 0;
+  text-align: center;
+}
+
+.input-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.input-box {
+  position: relative;
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.input-box label {
+  display: block;
+  color: white;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.input-box label .optional {
+  color: red;
+  font-size: 0.9rem;
+}
+
+/* required field asterisk */
+.required {
+  color: #ff4757; /* match .error-msg color */
+  margin-left: 0.15rem;
+  font-weight: 700;
+}
+
+.input-box input,
+.input-box select {
+  width: 100%;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 0 1rem;
+  color: white;
+  font-size: 1rem;
+}
+
+.input-box input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.input-box input:focus,
+.input-box select:focus {
+  outline: none;
+  border-color: #ffd700;
+}
+
+.password-container {
+  position: relative;
+}
+
+.show-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  user-select: none;
+}
+
+.password-strength {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.password-strength.weak {
+  color: #ff4757;
+}
+
+.password-strength.medium {
+  color: #ffa502;
+}
+
+.password-strength.strong {
+  color: #2ed573;
+}
+
+.error-msg {
+  color: #ff4757;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+  color: white;
+}
+
+.remember-forgot a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+.btn {
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(45deg, #ffffff, #6b380b);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s;
+  margin: 1rem 0;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.register-link {
+  text-align: center;
+  color: white;
+  margin-top: 1rem;
+}
+
+.register-link a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.message {
+  text-align: center;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.message.success {
+  background: rgba(46, 213, 115, 0.2);
+  color: #2ed573;
+  border: 1px solid #2ed573;
+}
+
+.message.error {
+  background: rgba(255, 71, 87, 0.2);
+  color: #ff4757;
+  border: 1px solid #ff4757;
+}
+
+#lockout-timer {
+  text-align: center;
+  color: #ff4757;
+  margin: 1rem 0;
+  font-weight: bold;
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  .input-row {
+    flex-direction: column;
+  }
+
+  .wrapper {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .header-content {
+    padding: 0 1rem;
+  }
+
+  nav ul {
+    gap: 1rem;
+  }
+}

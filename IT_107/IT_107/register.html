@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - CodeKitchen</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <div class="header-content">
+        <div class="prospect-name">CodeKitchen</div>
+        <nav>
+            <ul>
+                <!-- nav items rendered by js/nav.js -->
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="wrapper">
+        <form id="register-form" action="php/register.php" method="POST">
+            <h1>Register</h1>
+            
+            <div class="input-row">
+                <div class="input-box">
+                    <label for="id-no">ID Number<span class="required">*</span></label>
+                    <input type="text" id="id-no" name="id_no" placeholder="xxxx-xxxx" required>
+                    <span class="error-msg" id="id-error"></span>
+                </div>
+                <div class="input-box">
+                    <label for="first-name">First Name<span class="required">*</span></label>
+                    <input type="text" id="first-name" name="first_name" placeholder="Enter your first name" required>
+                    <span class="error-msg" id="fname-error"></span>
+                </div>
+            </div>
+            
+            <div class="input-row">
+                <div class="input-box">
+                    <label for="middle-name">Middle Name <span class="optional">optional</span></label>
+                    <input type="text" id="middle-name" name="middle_name" placeholder="Enter your middle name">
+                    <span class="error-msg" id="mname-error"></span>
+                </div>
+                <div class="input-box">
+                    <label for="last-name">Last Name<span class="required">*</span></label>
+                    <input type="text" id="last-name" name="last_name" placeholder="Enter your last name" required>
+                    <span class="error-msg" id="lname-error"></span>
+                </div>
+            </div>
+            
+            <div class="input-row">
+                <div class="input-box">
+                    <label for="extension-name">Extension Name <span class="optional">optional</span></label>
+                    <select id="extension-name" name="extension_name">
+                        <option value="">Select Extension</option>
+                        <option value="Jr.">Jr.</option>
+                        <option value="Sr.">Sr.</option>
+                        <option value="II">II</option>
+                        <option value="III">III</option>
+                        <option value="IV">IV</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <input type="text" id="other-extension" name="other_extension" placeholder="Specify other extension" style="display:none;">
+                    <span class="error-msg" id="ext-error"></span>
+                </div>
+                <div class="input-box">
+                    <label for="birthdate">Birthdate<span class="required">*</span></label>
+                    <input type="date" id="birthdate" name="birthdate" required>
+                    <span class="error-msg" id="birth-error"></span>
+                </div>
+            </div>
+            
+            <div class="input-row">
+                <div class="input-box">
+                    <label for="age">Age<span class="required">*</span></label>
+                    <input type="number" id="age" name="age" placeholder="Age" readonly required>
+                    <span class="error-msg" id="age-error"></span>
+                </div>
+                <div class="input-box">
+                    <label for="sex">Sex<span class="required">*</span></label>
+                    <select id="sex" name="sex" required>
+                        <option value="" disabled selected>Select Sex</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                    <span class="error-msg" id="sex-error"></span>
+                </div>
+            </div>
+
+            <!-- Address Fields -->
+            <div class="input-row">
+                <div class="input-box">
+                    <label for="street">Purok/Street<span class="required">*</span></label>
+                    <input type="text" id="street" name="street" placeholder="Enter street/purok" required>
+                    <span class="error-msg" id="street-error"></span>
+                </div>
+                <div class="input-box">
+                    <label for="barangay">Barangay<span class="required">*</span></label>
+                    <input type="text" id="barangay" name="barangay" placeholder="Enter barangay" required>
+                    <span class="error-msg" id="barangay-error"></span>
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div class="input-box">
+                    <label for="city">Municipal/City<span class="required">*</span></label>
+                    <input type="text" id="city" name="city" placeholder="Enter city/municipality" required>
+                    <span class="error-msg" id="city-error"></span>
+                </div>
+                <div class="input-box">
+                    <label for="province">Province<span class="required">*</span></label>
+                    <input type="text" id="province" name="province" placeholder="Enter province" required>
+                    <span class="error-msg" id="province-error"></span>
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div class="input-box">
+                    <label for="country">Country<span class="required">*</span></label>
+                    <input type="text" id="country" name="country" placeholder="Enter country" required>
+                    <span class="error-msg" id="country-error"></span>
+                </div>
+                <div class="input-box">
+                    <label for="zipcode">Zip Code<span class="required">*</span></label>
+                    <input type="text" id="zipcode" name="zipcode" placeholder="Enter zip code" required>
+                    <span class="error-msg" id="zip-error"></span>
+                </div>
+            </div>
+            
+            <div class="input-row">
+                <div class="input-box">
+                    <label for="email">Email Address<span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    <span class="error-msg" id="email-error"></span>
+                </div>
+                <div class="input-box">
+                    <label for="username">Username<span class="required">*</span></label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                    <span class="error-msg" id="username-error"></span>
+                </div>
+            </div>
+            
+            <div class="input-row">
+                <div class="input-box">
+                    <label for="password">Password<span class="required">*</span></label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <div class="password-strength" id="password-strength"></div>
+                    <span class="error-msg" id="password-error"></span>
+                </div>
+                <div class="input-box">
+                    <label for="re-password">Re-enter Password<span class="required">*</span></label>
+                    <input type="password" id="re-password" name="re_password" placeholder="Re-enter your password" required>
+                    <span class="error-msg" id="repass-error"></span>
+                </div>
+            </div>
+
+            <!-- Authentication Questions -->
+            <h3>Authentication Questions</h3>
+            <div class="input-box">
+                <label for="question1">Who is your best friend in Elementary?<span class="required">*</span></label>
+                <input type="text" id="question1" name="question1" placeholder="Enter your answer" required>
+                <span class="error-msg" id="q1-error"></span>
+            </div>
+            
+            <div class="input-box">
+                <label for="question2">What is the name of your favorite pet?<span class="required">*</span></label>
+                <input type="text" id="question2" name="question2" placeholder="Enter your answer" required>
+                <span class="error-msg" id="q2-error"></span>
+            </div>
+            
+            <div class="input-box">
+                <label for="question3">Who is your favorite teacher in high school?<span class="required">*</span></label>
+                <input type="text" id="question3" name="question3" placeholder="Enter your answer" required>
+                <span class="error-msg" id="q3-error"></span>
+            </div>
+            
+            <button type="submit" class="btn">Register</button>
+            <div class="register-link">
+                <p>Already have an account? <a href="login.html">Login</a></p>
+            </div>
+        </form>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2025 CodeKitchen. All rights reserved.</p>
+</footer>
+
+<script src="js/nav.js"></script>
+<script src="js/register.js"></script>
+</body>
+</html>
